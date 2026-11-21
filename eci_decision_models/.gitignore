@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# 虚拟环境与 uv
+.venv/
+venv/
+.uv/
+
+# 测试、类型检查与 lint 缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# 本地环境与 IDE
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
+
+# 官方 EventStoryLine 原始 XML：本地只读缓存，不进入版本控制。
+data/EventStoryLine/
+
+# 未来实验的大体积原始输出与运行日志：不进入版本控制。
+experiments/**/raw/
+experiments/**/logs/
+experiments/**/checkpoints/
+experiments/**/*.jsonl
+experiments/**/*.jsonl.gz
+experiments/**/*.log
+experiments/**/*.bin
+experiments/**/*.pt
+experiments/**/*.safetensors
+
+# 标准化预测由原始响应离线重放生成；正式 run 的 predictions.jsonl 必须跟踪。
+# 其余小指标文件（meta.json、metrics.json、metrics.md）默认不被上述规则忽略。
+!experiments/**/predictions.jsonl

@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "run_id": "paper-esc",
+  "created_at": "2026-10-24T14:42:58.658606+00:00",
+  "started_at": "2026-10-24T14:14:22.148455+00:00",
+  "finished_at": "2026-10-24T14:42:58.623388+00:00",
+  "command": [
+    "${PROJECT_ROOT}/.slim/worktrees/lane-exp-paper/src/mrbalance_replay/__main__.py",
+    "--input",
+    "reference/MRBalance/data/test/ESC_intra_data.json",
+    "--output-dir",
+    "outputs/paper-esc",
+    "--experiment-dir",
+    "experiments/paper-esc",
+    "--run-id",
+    "paper-esc",
+    "--mode",
+    "debate",
+    "--agents",
+    "4",
+    "--rounds",
+    "3",
+    "--roles",
+    "knowledge graphs expert,causal analysis expert,NLPexpert,none",
+    "--shuffle-roles-each-round",
+    "--selection",
+    "importance",
+    "--prompt-styles",
+    "positive,normal,normal,negative",
+    "--concurrency",
+    "4",
+    "--seed",
+    "0"
+  ],
+  "package_version": "0.1.0",
+  "git": {
+    "commit": "c593224445bfa77d3deba0a44e9baac1c06c12fd",
+    "branch": "omos/lane-exp-paper",
+    "dirty": false
+  },
+  "model": "deepseek-flash",
+  "reasoning_effort": "none",
+  "config": {
+    "input_path": "reference/MRBalance/data/test/ESC_intra_data.json",
+    "output_dir": "outputs/paper-esc",
+    "run_id": "paper-esc",
+    "experiment_dir": "experiments/paper-esc",
+    "mode": "debate",
+    "model": null,
+    "reasoning_effort": null,
+    "agents": 4,
+    "rounds": 3,
+    "roles": [
+      "knowledge graphs expert",
+      "causal analysis expert",
+      "NLPexpert",
+      "none"
+    ],
+    "prompt_styles": [
+      "positive",
+      "normal",
+      "normal",
+      "negative"
+    ],
+    "concurrency": 4,
+    "limit": null,
+    "label_mode": "consensus",
+    "seed": 0,
+    "evaluate": false,
+    "retry_failed": true,
+    "shuffle_roles_each_round": true,
+    "selection": "importance"
+  },
+  "data": {
+    "path": "reference/MRBalance/data/test/ESC_intra_data.json",
+    "sha256": "feff6575298d5268341e603f33e806ba87e1e82d35c24ce0135ccb0a3f335e0c",
+    "n_records": 1600
+  },
+  "output": {
+    "path": "outputs/paper-esc/response.jsonl",
+    "sha256": "6770f440356c66c047a2b75d72c192ad177c22b1ac10e4733652fd1c65330b0d",
+    "n_records": 1600,
+    "n_failed": 0
+  },
+  "stats": {
+    "processed": 1600,
+    "skipped": 0,
+    "failed": 0,
+    "calls": 5933,
+    "prompt_tokens": 2380828,
+    "completion_tokens": 386797,
+    "elapsed_seconds": 1716.4232930839644
+  },
+  "metrics": {
+    "all": {
+      "precision": 0.6586433260393874,
+      "recall": 0.602,
+      "f1": 0.6290491118077325,
+      "pos_recall": 0.602,
+      "neg_recall": 0.8581818181818182,
+      "accuracy": 0.778125,
+      "n_samples": 1600
+    },
+    "intra": {
+      "precision": 0.6586433260393874,
+      "recall": 0.602,
+      "f1": 0.6290491118077325,
+      "pos_recall": 0.602,
+      "neg_recall": 0.8581818181818182,
+      "accuracy": 0.778125,
+      "n_samples": 1600
+    },
+    "inter": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pos_recall": 0.0,
+      "neg_recall": 0.0,
+      "accuracy": 0.0,
+      "n_samples": 0
+    }
+  }
+}

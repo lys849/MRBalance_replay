@@ -1,0 +1,138 @@
+{
+  "budget": {
+    "max_requests": 1600,
+    "max_retries": 0,
+    "max_wall_seconds": 7200.0
+  },
+  "code": {
+    "commit": "f96d3ded18680002ce0950ac25511d84249879b7",
+    "dirty": true
+  },
+  "command": [
+    "${PROJECT_ROOT}/eci_decision_models/src/eci_decision_models/esc_run.py",
+    "--authorize-real-laya",
+    "--download-weights",
+    "--device",
+    "mps",
+    "--resume",
+    "--max-requests",
+    "1600",
+    "--max-retries",
+    "0",
+    "--max-wall-seconds",
+    "7200",
+    "--run-id",
+    "20261104T105505Z-laya-esc-pilot20"
+  ],
+  "control_status_counts": {},
+  "data": {
+    "cwd": "${PROJECT_ROOT}/eci_decision_models",
+    "path": "../reference/MRBalance/data/test/ESC_intra_data.json",
+    "resolved_path": "${PROJECT_ROOT}/reference/MRBalance/data/test/ESC_intra_data.json",
+    "sha256": "feff6575298d5268341e603f33e806ba87e1e82d35c24ce0135ccb0a3f335e0c"
+  },
+  "environment": {
+    "cwd": "${PROJECT_ROOT}/eci_decision_models",
+    "packages": {
+      "eci-decision-models": "0.1.0",
+      "huggingface-hub": "2.4.0",
+      "laya": "0.4.17",
+      "numpy": "2.5.4",
+      "safetensors": "0.8.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.1"
+    },
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "python_version": "3.13.11",
+    "uv_lock_sha256": "d852f46d83b7f043afc1aa231493ab8cfc04d85594888b9d5d77ebcb818322f0"
+  },
+  "finished_at_utc": "2026-11-04T10:57:21.426155+00:00",
+  "gate_status": "phase2-open",
+  "gold": {
+    "path": "artifacts/gold_choice_reconstructed/v1/gold_choice_reconstructed.jsonl",
+    "resolved_path": "${PROJECT_ROOT}/eci_decision_models/artifacts/gold_choice_reconstructed/v1/gold_choice_reconstructed.jsonl",
+    "sha256": "f4689e54fa176c2b05b82adecf2a1549775280e1df38f132498a0aa4f5e4662a",
+    "version": "gold_choice_reconstructed/v1"
+  },
+  "item_count": 1600,
+  "limit": null,
+  "metrics_md_path": "experiments/20261104T105505Z-laya-esc-pilot20/metrics.md",
+  "metrics_path": "experiments/20261104T105505Z-laya-esc-pilot20/metrics.json",
+  "model": "convaiinnovations/laya-typed-decisions",
+  "options": [
+    {
+      "description": "event 1 causes event 2",
+      "id": "cause",
+      "letter": "A"
+    },
+    {
+      "description": "event 1 is caused by event 2",
+      "id": "caused_by",
+      "letter": "B"
+    },
+    {
+      "description": "no causal relationship",
+      "id": "none",
+      "letter": "C"
+    }
+  ],
+  "predictions_sha256": "85cb3c95007337f12ff44661f8a121ee15847495d2ded28e62c270e1739240c2",
+  "prompt_version": "eci-canonical-prompt-v1",
+  "raw_sha256": "a273e5cc40816d6ac0541e044e1fcb7a09ea0a93778b914d55cded1e2be99210",
+  "request_count": 1600,
+  "resumed": true,
+  "run_id": "20261104T105505Z-laya-esc-pilot20",
+  "run_kind": "laya-only-exploratory",
+  "runtime_metadata": {
+    "amp_enabled": true,
+    "backend": "eager",
+    "device": "mps",
+    "dtype": "torch.float16",
+    "head_max_len": 256,
+    "inference_dtype": "torch.float32",
+    "max_len": 1024,
+    "model_id": "convaiinnovations/laya-typed-decisions",
+    "mps_amp_min_rows": 5,
+    "revision": "e929ae5cf69bc34259cd2f95c9e91145b818b1f0",
+    "temperature": [
+      1.0148024559020996,
+      1.0374259948730469,
+      1.0575125217437744
+    ],
+    "temperature_by_options": {
+      "choice:11+": 0.5,
+      "choice:2": 1.9063563346862793,
+      "choice:3-5": 1.7601518630981445,
+      "choice:6-10": 1.0000158548355103,
+      "noul:2": 1.983399510383606,
+      "score:3-5": 1.2514300346374512
+    },
+    "temperature_by_options_raw": {
+      "choice:11+": 0.10058280825614929,
+      "choice:2": 1.9063563346862793,
+      "choice:3-5": 1.7601518630981445,
+      "choice:6-10": 1.0000158548355103,
+      "noul:2": 1.983399510383606,
+      "score:3-5": 1.2514300346374512
+    },
+    "temperature_raw": [
+      1.0148024559020996,
+      1.0374259948730469,
+      1.0575125217437744
+    ]
+  },
+  "schema_version": "1.0.0",
+  "settings": {
+    "checkpoint": "convaiinnovations/laya-typed-decisions",
+    "device": "mps",
+    "download_weights": true,
+    "revision": "e929ae5cf69bc34259cd2f95c9e91145b818b1f0",
+    "sdk_version": "0.4.17"
+  },
+  "started_at_utc": "2026-11-04T10:55:27.208185+00:00",
+  "status": "ok",
+  "status_counts": {
+    "ok": 1600
+  },
+  "stopped": false
+}

@@ -1,0 +1,159 @@
+{
+  "N": 1145,
+  "binary": {
+    "N": 1145,
+    "accuracy": 0.33100436681222706,
+    "confusion_matrix": {
+      "fn": 28,
+      "fp": 738,
+      "invalid_negative": 0,
+      "invalid_positive": 0,
+      "tn": 164,
+      "tp": 215
+    },
+    "coverage": 1.0,
+    "f1": 0.35953177257525076,
+    "fail": 0,
+    "negative_recall": 0.18181818181818182,
+    "negative_support": 902,
+    "positive_recall": 0.8847736625514403,
+    "positive_support": 243,
+    "precision": 0.22560335781741866,
+    "recall": 0.8847736625514403,
+    "valid": 1145
+  },
+  "classification": {
+    "N": 1145,
+    "accuracy": 0.25327510917030566,
+    "confusion_columns": [
+      "cause",
+      "caused_by",
+      "none",
+      "invalid prediction"
+    ],
+    "confusion_matrix": {
+      "cause": [
+        20,
+        81,
+        10,
+        0
+      ],
+      "caused_by": [
+        8,
+        106,
+        18,
+        0
+      ],
+      "none": [
+        100,
+        638,
+        164,
+        0
+      ]
+    },
+    "coverage": 1.0,
+    "fail": 0,
+    "macro_f1": 0.22956893407195247,
+    "per_class": {
+      "cause": {
+        "f1": 0.16736401673640167,
+        "precision": 0.15625,
+        "predicted": 128,
+        "recall": 0.18018018018018017,
+        "support": 111
+      },
+      "caused_by": {
+        "f1": 0.22152560083594566,
+        "precision": 0.12848484848484848,
+        "predicted": 825,
+        "recall": 0.803030303030303,
+        "support": 132
+      },
+      "none": {
+        "f1": 0.2998171846435101,
+        "precision": 0.8541666666666666,
+        "predicted": 192,
+        "recall": 0.18181818181818182,
+        "support": 902
+      }
+    },
+    "valid": 1145,
+    "valid_subset": {
+      "N": 1145,
+      "accuracy": 0.25327510917030566,
+      "confusion_columns": [
+        "cause",
+        "caused_by",
+        "none",
+        "invalid prediction"
+      ],
+      "confusion_matrix": {
+        "cause": [
+          20,
+          81,
+          10,
+          0
+        ],
+        "caused_by": [
+          8,
+          106,
+          18,
+          0
+        ],
+        "none": [
+          100,
+          638,
+          164,
+          0
+        ]
+      },
+      "coverage": 1.0,
+      "fail": 0,
+      "macro_f1": 0.22956893407195247,
+      "per_class": {
+        "cause": {
+          "f1": 0.16736401673640167,
+          "precision": 0.15625,
+          "predicted": 128,
+          "recall": 0.18018018018018017,
+          "support": 111
+        },
+        "caused_by": {
+          "f1": 0.22152560083594566,
+          "precision": 0.12848484848484848,
+          "predicted": 825,
+          "recall": 0.803030303030303,
+          "support": 132
+        },
+        "none": {
+          "f1": 0.2998171846435101,
+          "precision": 0.8541666666666666,
+          "predicted": 192,
+          "recall": 0.18181818181818182,
+          "support": 902
+        }
+      },
+      "valid": 1145
+    }
+  },
+  "coverage": 1.0,
+  "extra_prediction_ids": [],
+  "extra_predictions": 0,
+  "fail": 0,
+  "matched": 1145,
+  "missing_predictions": 0,
+  "status_counts": {
+    "ok": 1145
+  },
+  "strict_direction": {
+    "f1": 0.22764227642276424,
+    "fn": 117,
+    "fp": 738,
+    "n": 1145,
+    "precision": 0.14583333333333334,
+    "recall": 0.5185185185185185,
+    "tn": 164,
+    "tp": 126
+  },
+  "valid": 1145
+}

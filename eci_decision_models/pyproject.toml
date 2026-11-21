@@ -1,0 +1,71 @@
+[project]
+name = "eci-decision-models"
+version = "0.1.0"
+description = "在 Event Causality Identification 上比较 Jev 与 Laya 两种 System One 决策模型。"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+laya = [
+    "laya==0.4.17",
+]
+jev = [
+    "typesafe-sdk==0.7.5",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15",
+    "pre-commit>=4.2",
+    "pytest>=8.3",
+    "ruff>=0.11",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/eci_decision_models"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src/eci_decision_models",
+    "/tests",
+    "/docs",
+    "/experiments/README.md",
+    "/README.md",
+    "/CONTRIBUTING.md",
+    "/pyproject.toml",
+    "/uv.lock",
+    "/.env.example",
+    "/.editorconfig",
+    "/.gitignore",
+    "/.pre-commit-config.yaml",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["eci_decision_models"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src", "tests"]
+exclude = ["data/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Document doc_name="12_1ecbplus.xml">
+  <token t_id="1" sentence="0" number="0">Alpha</token>
+  <token t_id="2" sentence="0" number="1">triggers</token>
+  <token t_id="3" sentence="0" number="2">Gamma</token>
+  <token t_id="4" sentence="0" number="3">today</token>
+  <token t_id="5" sentence="0" number="4">plus</token>
+  <token t_id="6" sentence="0" number="5">omega</token>
+  <Markables>
+    <ACTION_OCCURRENCE m_id="1" comment="" climaxEvent="FALSE">
+      <token_anchor t_id="1"/>
+    </ACTION_OCCURRENCE>
+    <ACTION_OCCURRENCE m_id="2" comment="" climaxEvent="FALSE">
+      <token_anchor t_id="3"/>
+    </ACTION_OCCURRENCE>
+    <ACTION_OCCURRENCE m_id="5" comment="" climaxEvent="FALSE">
+      <token_anchor t_id="5"/>
+    </ACTION_OCCURRENCE>
+    <ACTION_OCCURRENCE m_id="6" comment="" climaxEvent="FALSE">
+      <token_anchor t_id="6"/>
+    </ACTION_OCCURRENCE>
+  </Markables>
+  <Relations>
+    <PLOT_LINK r_id="1201" relType="PRECONDITION" SIGNAL="" CAUSES="FALSE" CAUSED_BY="FALSE">
+      <source m_id="5"/>
+      <target m_id="6"/>
+    </PLOT_LINK>
+  </Relations>
+</Document>

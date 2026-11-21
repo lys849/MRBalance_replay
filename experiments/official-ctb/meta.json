@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "run_id": "official-ctb",
+  "created_at": "2026-10-24T16:21:07.701823+00:00",
+  "started_at": "2026-10-24T16:11:45.460697+00:00",
+  "finished_at": "2026-10-24T16:21:07.666125+00:00",
+  "command": [
+    "${PROJECT_ROOT}/.slim/worktrees/lane-exp-official/src/mrbalance_replay/__main__.py",
+    "--input",
+    "reference/MRBalance/data/test/CTB_intra_data.json",
+    "--output-dir",
+    "outputs/official-ctb",
+    "--experiment-dir",
+    "experiments/official-ctb",
+    "--run-id",
+    "official-ctb",
+    "--mode",
+    "debate",
+    "--agents",
+    "4",
+    "--rounds",
+    "3",
+    "--roles",
+    "knowledge graphs expert,knowledge graphs expert,knowledge graphs expert,knowledge graphs expert",
+    "--prompt-styles",
+    "positive,normal,normal,negative",
+    "--concurrency",
+    "4",
+    "--seed",
+    "0"
+  ],
+  "package_version": "0.1.0",
+  "git": {
+    "commit": "ea3eb37f45b73cd86ec7534ad117726851604346",
+    "branch": "omos/lane-exp-official",
+    "dirty": false
+  },
+  "model": "deepseek-flash",
+  "reasoning_effort": "none",
+  "config": {
+    "input_path": "reference/MRBalance/data/test/CTB_intra_data.json",
+    "output_dir": "outputs/official-ctb",
+    "run_id": "official-ctb",
+    "experiment_dir": "experiments/official-ctb",
+    "mode": "debate",
+    "model": null,
+    "reasoning_effort": null,
+    "agents": 4,
+    "rounds": 3,
+    "roles": [
+      "knowledge graphs expert",
+      "knowledge graphs expert",
+      "knowledge graphs expert",
+      "knowledge graphs expert"
+    ],
+    "prompt_styles": [
+      "positive",
+      "normal",
+      "normal",
+      "negative"
+    ],
+    "concurrency": 4,
+    "limit": null,
+    "label_mode": "consensus",
+    "seed": 0,
+    "evaluate": false,
+    "retry_failed": true,
+    "shuffle_roles_each_round": false,
+    "selection": "listwise"
+  },
+  "data": {
+    "path": "reference/MRBalance/data/test/CTB_intra_data.json",
+    "sha256": "c950169f5265efb975dbf142dd74962bfbafa176417969db4e40e5bdc8acdd55",
+    "n_records": 1198
+  },
+  "output": {
+    "path": "outputs/official-ctb/response.jsonl",
+    "sha256": "b2d6ef09e63760ef3a1f2c049155b27778ae61a9b757d6209a2b45d0f9d3d95b",
+    "n_records": 1198,
+    "n_failed": 0
+  },
+  "stats": {
+    "processed": 532,
+    "skipped": 666,
+    "failed": 0,
+    "calls": 2038,
+    "prompt_tokens": 869587,
+    "completion_tokens": 148157,
+    "elapsed_seconds": 562.188683958957
+  },
+  "metrics": {
+    "all": {
+      "precision": 0.6217765042979942,
+      "recall": 0.7281879194630873,
+      "f1": 0.6707882534775889,
+      "pos_recall": 0.7281879194630873,
+      "neg_recall": 0.8533333333333334,
+      "accuracy": 0.82220367278798,
+      "n_samples": 1198
+    },
+    "intra": {
+      "precision": 0.6217765042979942,
+      "recall": 0.7281879194630873,
+      "f1": 0.6707882534775889,
+      "pos_recall": 0.7281879194630873,
+      "neg_recall": 0.8533333333333334,
+      "accuracy": 0.82220367278798,
+      "n_samples": 1198
+    },
+    "inter": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pos_recall": 0.0,
+      "neg_recall": 0.0,
+      "accuracy": 0.0,
+      "n_samples": 0
+    }
+  }
+}

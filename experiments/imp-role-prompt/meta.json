@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "run_id": "imp-role-prompt",
+  "created_at": "2026-10-24T16:21:14.754495+00:00",
+  "started_at": "2026-10-24T16:11:47.240996+00:00",
+  "finished_at": "2026-10-24T16:21:14.713732+00:00",
+  "command": [
+    "${PROJECT_ROOT}/.slim/worktrees/lane-exp-ablations/src/mrbalance_replay/__main__.py",
+    "--input",
+    "reference/MRBalance/data/test/ESC_intra_data.json",
+    "--output-dir",
+    "outputs/imp-role-prompt",
+    "--experiment-dir",
+    "experiments/imp-role-prompt",
+    "--run-id",
+    "imp-role-prompt",
+    "--mode",
+    "debate",
+    "--agents",
+    "4",
+    "--rounds",
+    "3",
+    "--roles",
+    "knowledge graphs expert,causal analysis expert,NLPexpert,none",
+    "--prompt-styles",
+    "normal,normal,normal,normal",
+    "--selection",
+    "listwise",
+    "--concurrency",
+    "4",
+    "--seed",
+    "0"
+  ],
+  "package_version": "0.1.0",
+  "git": {
+    "commit": "d5fc07094969cfce422463e9b04f28ab45d3d18d",
+    "branch": "omos/lane-exp-ablations",
+    "dirty": false
+  },
+  "model": "deepseek-flash",
+  "reasoning_effort": "none",
+  "config": {
+    "input_path": "reference/MRBalance/data/test/ESC_intra_data.json",
+    "output_dir": "outputs/imp-role-prompt",
+    "run_id": "imp-role-prompt",
+    "experiment_dir": "experiments/imp-role-prompt",
+    "mode": "debate",
+    "model": null,
+    "reasoning_effort": null,
+    "agents": 4,
+    "rounds": 3,
+    "roles": [
+      "knowledge graphs expert",
+      "causal analysis expert",
+      "NLPexpert",
+      "none"
+    ],
+    "prompt_styles": [
+      "normal",
+      "normal",
+      "normal",
+      "normal"
+    ],
+    "concurrency": 4,
+    "limit": null,
+    "label_mode": "consensus",
+    "seed": 0,
+    "evaluate": false,
+    "retry_failed": true,
+    "shuffle_roles_each_round": false,
+    "selection": "listwise"
+  },
+  "data": {
+    "path": "reference/MRBalance/data/test/ESC_intra_data.json",
+    "sha256": "feff6575298d5268341e603f33e806ba87e1e82d35c24ce0135ccb0a3f335e0c",
+    "n_records": 1600
+  },
+  "output": {
+    "path": "outputs/imp-role-prompt/response.jsonl",
+    "sha256": "754bf495401d98330683c731dce9a1755a642362e6200e94c2edfae015f9784d",
+    "n_records": 1600,
+    "n_failed": 0
+  },
+  "stats": {
+    "processed": 623,
+    "skipped": 977,
+    "failed": 0,
+    "calls": 2203,
+    "prompt_tokens": 978746,
+    "completion_tokens": 134806,
+    "elapsed_seconds": 567.455879584013
+  },
+  "metrics": {
+    "all": {
+      "precision": 0.6446601941747573,
+      "recall": 0.664,
+      "f1": 0.6541871921182266,
+      "pos_recall": 0.664,
+      "neg_recall": 0.8336363636363636,
+      "accuracy": 0.780625,
+      "n_samples": 1600
+    },
+    "intra": {
+      "precision": 0.6446601941747573,
+      "recall": 0.664,
+      "f1": 0.6541871921182266,
+      "pos_recall": 0.664,
+      "neg_recall": 0.8336363636363636,
+      "accuracy": 0.780625,
+      "n_samples": 1600
+    },
+    "inter": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pos_recall": 0.0,
+      "neg_recall": 0.0,
+      "accuracy": 0.0,
+      "n_samples": 0
+    }
+  }
+}

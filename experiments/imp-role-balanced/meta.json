@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "run_id": "imp-role-balanced",
+  "created_at": "2026-10-24T14:54:39.323111+00:00",
+  "started_at": "2026-10-24T14:23:34.244377+00:00",
+  "finished_at": "2026-10-24T14:54:39.286703+00:00",
+  "command": [
+    "${PROJECT_ROOT}/.slim/worktrees/lane-exp-baseline/src/mrbalance_replay/__main__.py",
+    "--input",
+    "reference/MRBalance/data/test/ESC_intra_data.json",
+    "--output-dir",
+    "outputs/imp-role-balanced",
+    "--experiment-dir",
+    "experiments/imp-role-balanced",
+    "--run-id",
+    "imp-role-balanced",
+    "--mode",
+    "debate",
+    "--agents",
+    "4",
+    "--rounds",
+    "3",
+    "--roles",
+    "knowledge graphs expert,causal analysis expert,NLPexpert,none",
+    "--prompt-styles",
+    "positive,normal,normal,negative",
+    "--selection",
+    "listwise",
+    "--concurrency",
+    "4",
+    "--seed",
+    "0"
+  ],
+  "package_version": "0.1.0",
+  "git": {
+    "commit": "ea64a648882e067ff3848e42cd56b1934e97c1c1",
+    "branch": "omos/lane-exp-baseline",
+    "dirty": false
+  },
+  "model": "deepseek-flash",
+  "reasoning_effort": "none",
+  "config": {
+    "input_path": "reference/MRBalance/data/test/ESC_intra_data.json",
+    "output_dir": "outputs/imp-role-balanced",
+    "run_id": "imp-role-balanced",
+    "experiment_dir": "experiments/imp-role-balanced",
+    "mode": "debate",
+    "model": null,
+    "reasoning_effort": null,
+    "agents": 4,
+    "rounds": 3,
+    "roles": [
+      "knowledge graphs expert",
+      "causal analysis expert",
+      "NLPexpert",
+      "none"
+    ],
+    "prompt_styles": [
+      "positive",
+      "normal",
+      "normal",
+      "negative"
+    ],
+    "concurrency": 4,
+    "limit": null,
+    "label_mode": "consensus",
+    "seed": 0,
+    "evaluate": false,
+    "retry_failed": true,
+    "shuffle_roles_each_round": false,
+    "selection": "listwise"
+  },
+  "data": {
+    "path": "reference/MRBalance/data/test/ESC_intra_data.json",
+    "sha256": "feff6575298d5268341e603f33e806ba87e1e82d35c24ce0135ccb0a3f335e0c",
+    "n_records": 1600
+  },
+  "output": {
+    "path": "outputs/imp-role-balanced/response.jsonl",
+    "sha256": "955ddc62b199b4eb8c2c4d36cf991dfa585d0afacc2da65bb97407b47d560e58",
+    "n_records": 1600,
+    "n_failed": 0
+  },
+  "stats": {
+    "processed": 1600,
+    "skipped": 0,
+    "failed": 0,
+    "calls": 6022,
+    "prompt_tokens": 2439178,
+    "completion_tokens": 416582,
+    "elapsed_seconds": 1864.9862995420117
+  },
+  "metrics": {
+    "all": {
+      "precision": 0.6542669584245077,
+      "recall": 0.598,
+      "f1": 0.6248693834900731,
+      "pos_recall": 0.598,
+      "neg_recall": 0.8563636363636363,
+      "accuracy": 0.775625,
+      "n_samples": 1600
+    },
+    "intra": {
+      "precision": 0.6542669584245077,
+      "recall": 0.598,
+      "f1": 0.6248693834900731,
+      "pos_recall": 0.598,
+      "neg_recall": 0.8563636363636363,
+      "accuracy": 0.775625,
+      "n_samples": 1600
+    },
+    "inter": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pos_recall": 0.0,
+      "neg_recall": 0.0,
+      "accuracy": 0.0,
+      "n_samples": 0
+    }
+  }
+}

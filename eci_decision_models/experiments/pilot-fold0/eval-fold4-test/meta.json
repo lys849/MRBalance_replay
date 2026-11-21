@@ -1,0 +1,39 @@
+{
+  "checkpoint": "experiments/pilot-fold0/checkpoint-fold4",
+  "checkpoint_config_sha256": null,
+  "checkpoint_model_safetensors_sha256": "63d881eea760d587b4a63359bc5bbe3b4a48cff97e544689573882687ae392c8",
+  "command": "${PROJECT_ROOT}/eci_decision_models/.venv/bin/python3 -m eci_decision_models.finetune_eval --checkpoint experiments/pilot-fold0/checkpoint-fold4 --test-jsonl experiments/pilot-fold0/data/fold4/test.jsonl --pairs-jsonl experiments/pilot-fold0/data/fold4/test_pairs.jsonl --output-dir experiments/pilot-fold0/eval-fold4-test --device mps --run-id fold4-test",
+  "command_argv": [
+    "--checkpoint",
+    "experiments/pilot-fold0/checkpoint-fold4",
+    "--test-jsonl",
+    "experiments/pilot-fold0/data/fold4/test.jsonl",
+    "--pairs-jsonl",
+    "experiments/pilot-fold0/data/fold4/test_pairs.jsonl",
+    "--output-dir",
+    "experiments/pilot-fold0/eval-fold4-test",
+    "--device",
+    "mps",
+    "--run-id",
+    "fold4-test"
+  ],
+  "counts": {
+    "coverage": 1.0,
+    "extra_predictions": 0,
+    "fail": 0,
+    "matched": 1485,
+    "pairs": 1485,
+    "predictions": 1485,
+    "test_rows": 1485,
+    "valid": 1485
+  },
+  "device": "mps",
+  "finished_at": "2026-11-05T18:50:40.411282Z",
+  "laya_sdk_version": "0.4.17",
+  "pairs_data_sha256": "eba4fb08a9b434ef7243c38abedac02d2d1bebf3a8580c6df93437f740247737",
+  "pairs_jsonl": "experiments/pilot-fold0/data/fold4/test_pairs.jsonl",
+  "run_id": "fold4-test",
+  "started_at": "2026-11-05T18:49:08.062652Z",
+  "test_data_sha256": "8824030bfc84b4f070a42ff1b2ea2d069ca808abd334e16ccaa0a0ff7eee28ad",
+  "test_jsonl": "experiments/pilot-fold0/data/fold4/test.jsonl"
+}

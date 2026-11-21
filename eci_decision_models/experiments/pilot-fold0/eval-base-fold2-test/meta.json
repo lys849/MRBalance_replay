@@ -1,0 +1,39 @@
+{
+  "checkpoint": "${HF_CACHE}/hub/models--convaiinnovations--laya-typed-decisions/snapshots/e929ae5cf69bc34259cd2f95c9e91145b818b1f0",
+  "checkpoint_config_sha256": "7add7c041b53f7091e65908553af79ab3f077946e5f2312d510ae13b17c7c134",
+  "checkpoint_model_safetensors_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+  "command": "${PROJECT_ROOT}/eci_decision_models/.venv/bin/python3 -m eci_decision_models.finetune_eval --checkpoint ${HF_CACHE}/hub/models--convaiinnovations--laya-typed-decisions/snapshots/e929ae5cf69bc34259cd2f95c9e91145b818b1f0 --test-jsonl experiments/pilot-fold0/data/fold2/test.jsonl --pairs-jsonl experiments/pilot-fold0/data/fold2/test_pairs.jsonl --output-dir experiments/pilot-fold0/eval-base-fold2-test --device mps --run-id base-fold2-test",
+  "command_argv": [
+    "--checkpoint",
+    "${HF_CACHE}/hub/models--convaiinnovations--laya-typed-decisions/snapshots/e929ae5cf69bc34259cd2f95c9e91145b818b1f0",
+    "--test-jsonl",
+    "experiments/pilot-fold0/data/fold2/test.jsonl",
+    "--pairs-jsonl",
+    "experiments/pilot-fold0/data/fold2/test_pairs.jsonl",
+    "--output-dir",
+    "experiments/pilot-fold0/eval-base-fold2-test",
+    "--device",
+    "mps",
+    "--run-id",
+    "base-fold2-test"
+  ],
+  "counts": {
+    "coverage": 1.0,
+    "extra_predictions": 0,
+    "fail": 0,
+    "matched": 1312,
+    "pairs": 1312,
+    "predictions": 1312,
+    "test_rows": 1312,
+    "valid": 1312
+  },
+  "device": "mps",
+  "finished_at": "2026-11-06T05:43:59.679669Z",
+  "laya_sdk_version": "0.4.17",
+  "pairs_data_sha256": "4c38b89e3b20392228d7068ea6fb9efb9645ab7dab09fbeb0763f943847bd1de",
+  "pairs_jsonl": "experiments/pilot-fold0/data/fold2/test_pairs.jsonl",
+  "run_id": "base-fold2-test",
+  "started_at": "2026-11-06T05:42:26.741961Z",
+  "test_data_sha256": "09e344b8936b746c76ac229d759941f036de58b48e2b37f068226e2771fa790f",
+  "test_jsonl": "experiments/pilot-fold0/data/fold2/test.jsonl"
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "run_id": "official-esc",
+  "created_at": "2026-10-24T14:42:52.059666+00:00",
+  "started_at": "2026-10-24T14:14:18.436632+00:00",
+  "finished_at": "2026-10-24T14:42:52.020248+00:00",
+  "command": [
+    "${PROJECT_ROOT}/.slim/worktrees/lane-exp-official/src/mrbalance_replay/__main__.py",
+    "--input",
+    "reference/MRBalance/data/test/ESC_intra_data.json",
+    "--output-dir",
+    "outputs/official-esc",
+    "--experiment-dir",
+    "experiments/official-esc",
+    "--run-id",
+    "official-esc",
+    "--mode",
+    "debate",
+    "--agents",
+    "4",
+    "--rounds",
+    "3",
+    "--roles",
+    "knowledge graphs expert,knowledge graphs expert,knowledge graphs expert,knowledge graphs expert",
+    "--prompt-styles",
+    "positive,normal,normal,negative",
+    "--concurrency",
+    "4",
+    "--seed",
+    "0"
+  ],
+  "package_version": "0.1.0",
+  "git": {
+    "commit": "c593224445bfa77d3deba0a44e9baac1c06c12fd",
+    "branch": "omos/lane-exp-official",
+    "dirty": false
+  },
+  "model": "deepseek-flash",
+  "reasoning_effort": "none",
+  "config": {
+    "input_path": "reference/MRBalance/data/test/ESC_intra_data.json",
+    "output_dir": "outputs/official-esc",
+    "run_id": "official-esc",
+    "experiment_dir": "experiments/official-esc",
+    "mode": "debate",
+    "model": null,
+    "reasoning_effort": null,
+    "agents": 4,
+    "rounds": 3,
+    "roles": [
+      "knowledge graphs expert",
+      "knowledge graphs expert",
+      "knowledge graphs expert",
+      "knowledge graphs expert"
+    ],
+    "prompt_styles": [
+      "positive",
+      "normal",
+      "normal",
+      "negative"
+    ],
+    "concurrency": 4,
+    "limit": null,
+    "label_mode": "consensus",
+    "seed": 0,
+    "evaluate": false,
+    "retry_failed": true,
+    "shuffle_roles_each_round": false,
+    "selection": "listwise"
+  },
+  "data": {
+    "path": "reference/MRBalance/data/test/ESC_intra_data.json",
+    "sha256": "feff6575298d5268341e603f33e806ba87e1e82d35c24ce0135ccb0a3f335e0c",
+    "n_records": 1600
+  },
+  "output": {
+    "path": "outputs/official-esc/response.jsonl",
+    "sha256": "e2cf689190ccbd0399c183ec48adf18ed7f70c02daa07c224b24f6b20803afcc",
+    "n_records": 1600,
+    "n_failed": 0
+  },
+  "stats": {
+    "processed": 1600,
+    "skipped": 0,
+    "failed": 0,
+    "calls": 5804,
+    "prompt_tokens": 2436426,
+    "completion_tokens": 390880,
+    "elapsed_seconds": 1713.5320259170257
+  },
+  "metrics": {
+    "all": {
+      "precision": 0.6651785714285714,
+      "recall": 0.596,
+      "f1": 0.6286919831223629,
+      "pos_recall": 0.596,
+      "neg_recall": 0.8636363636363636,
+      "accuracy": 0.78,
+      "n_samples": 1600
+    },
+    "intra": {
+      "precision": 0.6651785714285714,
+      "recall": 0.596,
+      "f1": 0.6286919831223629,
+      "pos_recall": 0.596,
+      "neg_recall": 0.8636363636363636,
+      "accuracy": 0.78,
+      "n_samples": 1600
+    },
+    "inter": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pos_recall": 0.0,
+      "neg_recall": 0.0,
+      "accuracy": 0.0,
+      "n_samples": 0
+    }
+  }
+}

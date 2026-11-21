@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "run_id": "single-zeroshot-esc",
+  "created_at": "2026-10-24T14:19:28.847643+00:00",
+  "started_at": "2026-10-24T14:14:34.031142+00:00",
+  "finished_at": "2026-10-24T14:19:28.804229+00:00",
+  "command": [
+    "${PROJECT_ROOT}/.slim/worktrees/lane-exp-baseline/src/mrbalance_replay/__main__.py",
+    "--input",
+    "reference/MRBalance/data/test/ESC_intra_data.json",
+    "--output-dir",
+    "outputs/single-zeroshot-esc",
+    "--experiment-dir",
+    "experiments/single-zeroshot-esc",
+    "--run-id",
+    "single-zeroshot-esc",
+    "--mode",
+    "single_zeroshot",
+    "--concurrency",
+    "6",
+    "--seed",
+    "0"
+  ],
+  "package_version": "0.1.0",
+  "git": {
+    "commit": "c593224445bfa77d3deba0a44e9baac1c06c12fd",
+    "branch": "omos/lane-exp-baseline",
+    "dirty": false
+  },
+  "model": "deepseek-flash",
+  "reasoning_effort": "none",
+  "config": {
+    "input_path": "reference/MRBalance/data/test/ESC_intra_data.json",
+    "output_dir": "outputs/single-zeroshot-esc",
+    "run_id": "single-zeroshot-esc",
+    "experiment_dir": "experiments/single-zeroshot-esc",
+    "mode": "single_zeroshot",
+    "model": null,
+    "reasoning_effort": null,
+    "agents": 4,
+    "rounds": 3,
+    "roles": [
+      "knowledge graphs expert",
+      "knowledge graphs expert",
+      "knowledge graphs expert",
+      "knowledge graphs expert"
+    ],
+    "prompt_styles": [
+      "positive",
+      "normal",
+      "normal",
+      "negative"
+    ],
+    "concurrency": 6,
+    "limit": null,
+    "label_mode": "consensus",
+    "seed": 0,
+    "evaluate": false,
+    "retry_failed": true,
+    "shuffle_roles_each_round": false,
+    "selection": "listwise"
+  },
+  "data": {
+    "path": "reference/MRBalance/data/test/ESC_intra_data.json",
+    "sha256": "feff6575298d5268341e603f33e806ba87e1e82d35c24ce0135ccb0a3f335e0c",
+    "n_records": 1600
+  },
+  "output": {
+    "path": "outputs/single-zeroshot-esc/response.jsonl",
+    "sha256": "94c1b0fbd8150ef8294ae75fb8beeeadb9b2ad6f490d2e59f0f3ed6f82731a1d",
+    "n_records": 1600,
+    "n_failed": 0
+  },
+  "stats": {
+    "processed": 1600,
+    "skipped": 0,
+    "failed": 0,
+    "calls": 1600,
+    "prompt_tokens": 179155,
+    "completion_tokens": 118489,
+    "elapsed_seconds": 294.76411020901287
+  },
+  "metrics": {
+    "all": {
+      "precision": 0.6136363636363636,
+      "recall": 0.756,
+      "f1": 0.6774193548387097,
+      "pos_recall": 0.756,
+      "neg_recall": 0.7836363636363637,
+      "accuracy": 0.775,
+      "n_samples": 1600
+    },
+    "intra": {
+      "precision": 0.6136363636363636,
+      "recall": 0.756,
+      "f1": 0.6774193548387097,
+      "pos_recall": 0.756,
+      "neg_recall": 0.7836363636363637,
+      "accuracy": 0.775,
+      "n_samples": 1600
+    },
+    "inter": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pos_recall": 0.0,
+      "neg_recall": 0.0,
+      "accuracy": 0.0,
+      "n_samples": 0
+    }
+  }
+}

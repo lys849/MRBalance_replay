@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "run_id": "paper-ctb",
+  "created_at": "2026-10-24T16:20:37.735178+00:00",
+  "started_at": "2026-10-24T16:11:46.338951+00:00",
+  "finished_at": "2026-10-24T16:20:37.692374+00:00",
+  "command": [
+    "${PROJECT_ROOT}/.slim/worktrees/lane-exp-paper/src/mrbalance_replay/__main__.py",
+    "--input",
+    "reference/MRBalance/data/test/CTB_intra_data.json",
+    "--output-dir",
+    "outputs/paper-ctb",
+    "--experiment-dir",
+    "experiments/paper-ctb",
+    "--run-id",
+    "paper-ctb",
+    "--mode",
+    "debate",
+    "--agents",
+    "4",
+    "--rounds",
+    "3",
+    "--roles",
+    "knowledge graphs expert,causal analysis expert,NLPexpert,none",
+    "--shuffle-roles-each-round",
+    "--selection",
+    "importance",
+    "--prompt-styles",
+    "positive,normal,normal,negative",
+    "--concurrency",
+    "4",
+    "--seed",
+    "0"
+  ],
+  "package_version": "0.1.0",
+  "git": {
+    "commit": "b9a38029dbb577a2aa9a3401e97d154d751216c2",
+    "branch": "omos/lane-exp-paper",
+    "dirty": false
+  },
+  "model": "deepseek-flash",
+  "reasoning_effort": "none",
+  "config": {
+    "input_path": "reference/MRBalance/data/test/CTB_intra_data.json",
+    "output_dir": "outputs/paper-ctb",
+    "run_id": "paper-ctb",
+    "experiment_dir": "experiments/paper-ctb",
+    "mode": "debate",
+    "model": null,
+    "reasoning_effort": null,
+    "agents": 4,
+    "rounds": 3,
+    "roles": [
+      "knowledge graphs expert",
+      "causal analysis expert",
+      "NLPexpert",
+      "none"
+    ],
+    "prompt_styles": [
+      "positive",
+      "normal",
+      "normal",
+      "negative"
+    ],
+    "concurrency": 4,
+    "limit": null,
+    "label_mode": "consensus",
+    "seed": 0,
+    "evaluate": false,
+    "retry_failed": true,
+    "shuffle_roles_each_round": true,
+    "selection": "importance"
+  },
+  "data": {
+    "path": "reference/MRBalance/data/test/CTB_intra_data.json",
+    "sha256": "c950169f5265efb975dbf142dd74962bfbafa176417969db4e40e5bdc8acdd55",
+    "n_records": 1198
+  },
+  "output": {
+    "path": "outputs/paper-ctb/response.jsonl",
+    "sha256": "3cd716cbd9709ce6bfe07a2374fac7110c2ec0ec7627a8a0523ff11bb2899fe2",
+    "n_records": 1198,
+    "n_failed": 0
+  },
+  "stats": {
+    "processed": 506,
+    "skipped": 692,
+    "failed": 0,
+    "calls": 1996,
+    "prompt_tokens": 793757,
+    "completion_tokens": 142617,
+    "elapsed_seconds": 531.3373841659632
+  },
+  "metrics": {
+    "all": {
+      "precision": 0.6133720930232558,
+      "recall": 0.7080536912751678,
+      "f1": 0.6573208722741433,
+      "pos_recall": 0.7080536912751678,
+      "neg_recall": 0.8522222222222222,
+      "accuracy": 0.8163606010016694,
+      "n_samples": 1198
+    },
+    "intra": {
+      "precision": 0.6133720930232558,
+      "recall": 0.7080536912751678,
+      "f1": 0.6573208722741433,
+      "pos_recall": 0.7080536912751678,
+      "neg_recall": 0.8522222222222222,
+      "accuracy": 0.8163606010016694,
+      "n_samples": 1198
+    },
+    "inter": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pos_recall": 0.0,
+      "neg_recall": 0.0,
+      "accuracy": 0.0,
+      "n_samples": 0
+    }
+  }
+}
